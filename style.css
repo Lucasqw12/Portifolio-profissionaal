@@ -1,0 +1,55 @@
+/* Animação suave para o cartão/ilustração principal subir e descer */
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animação dinâmica para o ícone </> se mexer */
+@keyframes floatFast {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-14px) rotate(2deg);
+    }
+}
+
+.animate-float-card {
+    animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-float-badge {
+    animation: floatFast 3s ease-in-out infinite;
+}
+
+/* Ocultar barra de rolagem do carrossel mantendo a funcionalidade */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Personalização da barra de rolagem da página (Tema Gamer Azul/Amarelo) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050811;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e3a8a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #facc15;
+}
